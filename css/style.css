@@ -1,0 +1,52 @@
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo-icon {
+    height: 100px;
+    width: 300px;
+    background-image: url(../assets/Logort8.gif);
+    
+}
+
+nav {
+    display:flexbox;
+}
+
+nav>a {
+    border: 1px solid;
+    font-weight: bold;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    
+    background: linear-gradient(to right, rgb(208, 206, 206), rgb(255, 255, 255));
+    
+}
+
+.photo-banner {
+    height: 250px;
+    background-image: url(https://picsum.photos/1000);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.article {
+    height: 300px;
+}
+
+.message-container {
+    display: flex;
+
+}
+
+footer>div {
+    text-align: center;
+    font-family: cursive;
+    font-size: small;
+}
