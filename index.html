@@ -1,85 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicky Mini Project Revou</title>
     <link rel="stylesheet" href="css\style.css">
-  </head>
-  <body>
-    <!-- Logo & Navbar -->
-    <header class="main-header">
-      <!-- logo -->
-      <div class="logo-icon"></div>
 
-      <!-- nav -->
-      <nav>
-        <a href="#section-home">Home</a>
-        <a href="#section-profile">Profile</a>
-        <a href="#section-portofolio">Portofolio</a>
-        <a href="#section-message-us">Message Us</a>
-      </nav>
+</head>
+
+<body>
+    <!-- Logo icon & navigasi -->
+    <header class="header">
+        <!-- Logo -->
+        <div class="logo-icon">
+            <img src="assets\Revou-logo.png" alt="Logo" width="50px">
+        </div>
+
+        <!-- Navigasi -->
+        <input type="checkbox"  id="nav-toggle">
+        <nav>
+            <a href="#section-message">Message Us</a>
+            <a href="#section-profile">Our Profile</a>
+            <a href="#section-home">Home</a>
+        </nav>
+
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+
     </header>
-    <hr />
-    <!-- konten -->
+
+    <!-- Konten -->
     <main>
-      <!-- section Home -->
-      <section id="section-home">
-        <header>
-          <h1>Hollaa, Welcome to My Website</h1>
-        </header>
 
-        <article>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            fuga modi, debitis quas assumenda eligendi, rerum qui dignissimos,
-            tempore libero dolorum. Quidem aspernatur cumque cum at corrupti,
-            nisi enim illo.
-          </p>
+        <!-- Section Home -->
+        <section id="section-home">
+            <header>
+                <h1>Hi <span id="user">User</span>, Welcome To My Website</h1>
+            </header>
 
-          <!-- Banner -->
-          <div class="photo-banner"></div>
-        </article>
-      </section>
-      <hr />
+            <div id="section-home" class="section">
+                <div class="banner-container">
+                    <div class="banner active">
+                        <img src="assets\short-hair.jpg" alt="short-hair.jpg">
+                    </div>
+                    <div class="banner">
+                        <img src="assets\long-hair.jpg" alt="Banner 2">
+                    </div>
+                    <div class="banner">
+                        <img src="assets\blacan.jpg" alt="Banner 2">
+                    </div>
+                    
+                    <!-- Navigation Buttons -->
+                
+                    <button class="slide-nav prev-slide" onclick="plusDivs(-1)">Prev</button>
+                    <button class="slide-nav next-slide" onclick="plusDivs(1)">Next</button>
+                    
+                    <!-- Slide Indicators -->
+                    <div class="slide-indicators">
+                        <span class="slide-indicator active"></span>
+                        <span class="slide-indicator"></span>
+                    </div>
+                </div>
+            </div>
 
-      <!-- section Profile -->
-      <section id="section-profile">
-        <header>
-          <h1>Profile</h1>
-        </header>
+        <!-- Section Profile -->
+        <section id="section-profile">
+            <div class="main">
+                <h3>Definisi Kucing</h3>
+                <p><b>Kucing</b> adalah salah satu hewan peliharaan paling populer di seluruh dunia. Mereka telah menjadi sahabat manusia selama ribuan tahun, dan hubungan ini telah berkembang dari sekadar interaksi fungsional menjadi ikatan emosional yang kuat. Dalam budaya yang berbeda, kucing sering kali dipandang sebagai simbol keanggunan, ketenangan, dan misteri. Namun, di balik penampilan yang anggun dan tingkah laku yang sering kali terlihat tenang, kucing adalah makhluk yang penuh dengan insting liar, kemampuan bertahan hidup yang luar biasa, dan kepribadian unik yang sering membuat kita terpesona. <br>
+                    <h3>Karakteristik Umum Kucing Kampung</h3>
+                    <p>Kucing domestik memiliki karakteristik yang unik dan menarik. Penampilan fisik mereka sangat bervariasi, dari kucing berbulu pendek hingga panjang, dengan pola yang beragam seperti tabby atau blacan. Kucing berbulu pendek cenderung lebih mudah dirawat, sementara kucing berbulu panjang memerlukan perawatan ekstra agar bulunya tidak kusut. 
 
-        <article>
-          <div class="article"></div>
-        </article>
-      </section>
-      <hr />
+                        Kepribadian kucing domestik biasanya mandiri namun tetap penyayang. Mereka sering kali membutuhkan waktu sendiri, tetapi juga menikmati perhatian dari pemiliknya. Kucing ini cerdas, mudah beradaptasi, dan menunjukkan naluri berburu yang kuat, baik saat bermain atau mengejar mainan.<br>
+                        
+                        Secara kesehatan, kucing domestik umumnya lebih tahan terhadap penyakit genetik karena keragaman genetik mereka. Mereka juga mudah beradaptasi dengan berbagai lingkungan, baik di kota maupun di pedesaan. Meski terlihat tenang, mereka tetap memiliki insting pengamat yang tajam dan kemampuan berburu yang terjaga, mencerminkan sisi liar mereka yang masih ada.</p>
+            </div>
 
-      <!-- section Portofolio -->
-      <section id="section-portofolio">
-        <header>
-          <h1>Portofolio</h1>
-        </header>
+            <div class="sidebar">
+                <h1>3 Macam Ras Kucing Domesik</h1>
+                <ol type="1">
+                    <li>
+                        <b>Kucing domestik shorthair</b> adalah kucing kampung dengan bulu pendek. Jenis ini adalah yang paling umum ditemui di berbagai wilayah di Indonesia. Ciri-cirinya adalah tubuh yang kuat, bulu pendek dan halus, serta warna yang sangat beragam, mulai dari putih, hitam, abu-abu, hingga kombinasi warna lainnya. Kucing domestik shorthair sangat aktif, suka berburu, dan biasanya mudah dirawat.
+                    </li>
+                    <li>
+                        <b>Kucing domestik longhair </b> biasanya memiliki bulu yang lebih tebal dan panjang, sehingga memerlukan perawatan yang lebih teliti, terutama dalam menjaga kebersihan dan mencegah bulu kusut. Warna bulunya juga bervariasi seperti halnya kucing kampung berbulu pendek.
+                    </li>
+                    <li>
+                        <b>Kucing blacan (Tabby)</b> adalah sebutan lokal untuk kucing kampung yang memiliki pola garis-garis atau bintik-bintik pada bulunya, mirip dengan pola pada harimau atau macan tutul. Blacan adalah salah satu jenis kucing kampung yang banyak disukai karena pola bulunya yang menarik. Mereka biasanya memiliki karakter yang lincah dan suka berpetualang.
+                    </li>
+                </ol>
+            </div>
+        </section>
 
-        <article>
-          <div class="article"></div>
-        </article>
-      </section>    <hr>
+        <!-- Section Message Us -->
+        <section id="section-message" cf>
+            <h1>Berikan Kami Pesan</h1>
+            
+            <!-- Form Message -->
+            <form name="message-form" onsubmit="return validateForm ()">
+                <!-- Nama -->
+                <hr><p>Nama :</p><input type="text" placeholder="Masukkan Nama Lengkap Anda" name="nama-lengkap" id="nama-lengkap" required>
+                
+                <!-- Tanggal Lahir -->
+                <hr><p>Tanggal Lahir :</p>
+                <input type="date" name="tanggal=lahir" id="tanggal-lahir" required>
+                
 
-      <!-- section message us -->
-       <section id="section-message-us">
-        <header>
-            <h1>Message Us</h1>
-        </header>
+                <!-- Jenis Kelamin -->
+            <hr>
+            <label for="gender">Jenis Kelamin:</label>
+<select name="gender" id="gender" required>
+    <option value="Laki-laki" id="male" class="gender">Laki-laki</option>
+    <option value="Perempuan" id="female" class="gender">Perempuan</option>
+</select>
+            <!-- Pesan -->
+                <hr><p>Pesan :</p>
+                <textarea name="pesan" placeholder="Masukkan Pesan Anda" required></textarea>
+                <hr>
 
-        <article>
-            <div class="article"></div>
-        </article>
-       </section> <hr>
+                <!-- Submit -->
+                <input type="submit" value="Kirim" id="submit">
+            </form>
+
+            <!-- Hasil Form -->
+            <div>
+                <p>Nama: <span id="hasil-nama-lengkap"></span></p>
+                <p>Tanggal Lahir: <span id="hasil-tanggal-lahir"></span></p>
+                <p>Jenis Kelamin: <span id="hasil-gender"></span></p>
+                <p>Pesan: <span id="hasil-pesan"></span></p>
+            </div>
+
+        </section>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     </main>
 
+
+    <!-- Copyright -->
     <footer>
-        <div> Nicky Muhammad iqbal</div>
-    </footer>
-  </body>
+        <div>Nickymuhammadiqbal@gmail.com - RevoU </div>
+    </footer> 
+
+    <script src="js\script.js"></script>
+
+</body>
+
+
 </html>

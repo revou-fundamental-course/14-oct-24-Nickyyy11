@@ -1,52 +1,371 @@
+:root {
+    --text-color:#caccce;
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --background-color: #ecf0f1;
+    --text-color: #2c3e50;
+    --header-height: 70px;
+    --transition-speed: 0.3s;
+}
 
-.main-header {
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    background-color: var(--background-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Header and Navigation */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    /* position: sticky; */
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: var(--header-height);
+    transition: all var(--transition-speed) ease;
 }
 
 .logo-icon {
-    height: 100px;
-    width: 300px;
-    background-image: url(../assets/Logort8.gif);
-    
-}
-
-nav {
-    display:flexbox;
-}
-
-nav>a {
-    border: 1px solid;
-    font-weight: bold;
-    padding: 8px;
-    text-decoration: none;
-    color: black;
-    
-    background: linear-gradient(to right, rgb(208, 206, 206), rgb(255, 255, 255));
-    
-}
-
-.photo-banner {
-    height: 250px;
-    background-image: url(https://picsum.photos/1000);
-    background-size: cover;
-    background-position: center;
-
-}
-
-.article {
-    height: 300px;
-}
-
-.message-container {
     display: flex;
-
+    align-items: center;
 }
 
-footer>div {
-    text-align: center;
-    font-family: cursive;
-    font-size: small;
+.logo-icon img {
+    width: 50px;
+    height: auto;
+    transition: transform var(--transition-speed) ease;
+}
+
+.logo-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Hide checkbox */
+#nav-toggle {
+    display: none;
+}
+
+/* Navigation styles */
+header nav {
+    display: flex;
+    gap: 2rem;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: all var(--transition-speed) ease;
+}
+
+header a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: all var(--transition-speed) ease;
+}
+
+header a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Hamburger menu icon - hidden by default */
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    padding: 1rem;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 25px;
+    position: relative;
+    transition: all var(--transition-speed) ease;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 8px;
+}
+
+.nav-toggle-label span::after {
+    top: 8px;
+}
+.slide-nav {
+    background-color: rgb(255, 255, 255); /* Warna latar belakang silver */
+    color: black; /* Warna teks hitam */
+    border: none; /* Menghilangkan border default */
+    border-radius: 25px; /* Membuat sudut lonjong */
+    padding: 10px 20px; /* Menambahkan padding untuk ukuran tombol */
+    cursor: pointer; /* Mengubah kursor saat hover */
+    font-size: 16px; /* Ukuran font */
+    transition: background-color 0.3s; /* Efek transisi saat hover */
+}
+
+.slide-nav:hover {
+    background-color: darkgray; /* Warna latar belakang saat hover */
+}
+
+/* Main Content */
+[role="main"] {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    animation: fadeIn 1s ease;
+}
+
+/* Banner Images */
+.banner {
+    margin: 2rem 0;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed) ease;
+}
+
+.banner:hover {
+    transform: translateY(-5px);
+}
+
+.banner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform var(--transition-speed) ease;
+}
+
+.banner:hover img {
+    transform: scale(1.05);
+}
+
+
+
+/* Profile Section */
+#section-profile {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.main, .sidebar {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed) ease;
+}
+
+.main:hover, .sidebar:hover {
+    transform: translateY(-5px);
+}
+
+/* Message Form Section */
+#section-message {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#section-message input,
+#section-message textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    transition: all var(--transition-speed) ease;
+}
+
+#section-message input:focus,
+#section-message textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Footer */
+div:last-child {
+    text-align:center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Show hamburger menu */
+    .nav-toggle-label {
+        display: block;
+    }
+
+    header nav {
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background: var(--primary-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-speed) ease;
+    }
+
+    header nav a {
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Show menu when checkbox is checked */
+    #nav-toggle:checked ~ nav {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Animate hamburger to X */
+    #nav-toggle:checked ~ .nav-toggle-label span {
+        background: transparent;
+    }
+
+    #nav-toggle:checked ~ .nav-toggle-label span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    #nav-toggle:checked ~ .nav-toggle-label span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    #section-profile {
+        grid-template-columns: 1fr;
+    }
+
+    [role="main"] {
+        padding: 1rem;
+    }
+
+    .banner img {
+        height: 200px;
+    }
+}
+
+/* Typography */
+h1 {
+    color:var (--text-color);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--secondary-color);
+    transition: width var(--transition-speed) ease;
+}
+
+h1:hover::after {
+    width: 100px;
+}
+
+/* Form Elements */
+input[type="radio"] {
+    margin-right: 0.5rem;
+    accent-color: var(--secondary-color);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */ 
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
 }
